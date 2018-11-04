@@ -1,8 +1,8 @@
 import {
-  INCREASE,
-  DECREASE,
-  ADD_COUNTER,
-  REMOVE_COUNTER,
+  AUMENTAR,
+  DISMINUIR,
+  AGREGAR_CONTADOR,
+  REMOVER_CONTADOR,
 } from '../actionTypes';
 
 import { counter as counterInitialState } from '../initialState';
@@ -13,7 +13,7 @@ const counterReducer = (state = counterInitialState, action) => {
   let newItems;
 
   switch (action.type) {
-    case INCREASE:
+    case AUMENTAR:
       newItems = [
         ...items.slice(0, selected),
         items[selected] + 1,
@@ -25,7 +25,7 @@ const counterReducer = (state = counterInitialState, action) => {
         selected,
         items: newItems,
       };
-    case DECREASE:
+    case DISMINUIR:
       newItems = [
         ...items.slice(0, selected),
         items[selected] - 1,
@@ -37,7 +37,7 @@ const counterReducer = (state = counterInitialState, action) => {
         selected,
         items: newItems,
       };
-    case ADD_COUNTER:
+    case AGREGAR_CONTADOR:
       newItems = [
         ...items,
         0, // this is a new item
@@ -47,7 +47,7 @@ const counterReducer = (state = counterInitialState, action) => {
         ...state,
         items: newItems,
       };
-    case REMOVE_COUNTER:
+    case REMOVER_CONTADOR:
       // remove the last item
       newItems = [
         ...items.slice(0, items.length - 1),

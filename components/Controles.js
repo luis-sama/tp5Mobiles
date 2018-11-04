@@ -5,15 +5,15 @@ import counterActions from '../state/actions';
 
 class Controls extends React.Component {
   render() {
-    const { addCounter, removeCounter } = this.props;
+    const { agregarContador, removerContador } = this.props;
 
     return (
       <View style={styles.container}>
-        <TouchableOpacity style={styles.button} onPress={addCounter} >
+        <TouchableOpacity style={{padding: 15, backgroundColor: '#3fb710'}} onPress={agregarContador} >
           <Text style={styles.text}> + </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button} onPress={removeCounter} >
+        <TouchableOpacity style={{padding: 15, backgroundColor: '#ef1541'}} onPress={removerContador} >
           <Text style={styles.text}> - </Text>
         </TouchableOpacity>
       </View>
@@ -26,12 +26,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
-    backgroundColor: '#4A6075',
   },
 
   button: {
     backgroundColor: '#2c3e50',
-    padding: 15,
+    
   },
 
   text: {
@@ -43,8 +42,8 @@ const styles = StyleSheet.create({
 const mapStateToProps = () => ({});
 
 const mapDispatchToProps = {
-  addCounter: counterActions.addCounter,
-  removeCounter: counterActions.removeCounter,
+  agregarContador: counterActions.agregarContador,
+  removerContador: counterActions.removerContador,
 };
 
 export default connect(

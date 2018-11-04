@@ -1,27 +1,27 @@
 import * as actionTypes from '../actionTypes';
 
-export const increaseCounter = index => (dispatch, getState) => {
+export const aumentarContador = index => (dispatch, getState) => {
   dispatch({
-    type: actionTypes.INCREASE,
+    type: actionTypes.AUMENTAR,
     selected: index,
   });
 };
 
-export const decreaseCounter = index => (dispatch, getState) => {
+export const disminuirContador = index => (dispatch, getState) => {
   dispatch({
-    type: actionTypes.DECREASE,
+    type: actionTypes.DISMINUIR,
     selected: index,
   });
 };
 
-export const addCounter = () => (dispatch, getState) => {
+export const agregarContador = () => (dispatch, getState) => {
   dispatch({
-    type: actionTypes.ADD_COUNTER,
+    type: actionTypes.AGREGAR_CONTADOR,
   });
 };
 
-export const removeCounter = () => (dispatch, getState) => {
+export const removerContador = () => (dispatch, getState) => {
   dispatch({
-    type: actionTypes.REMOVE_COUNTER,
+    type: actionTypes.REMOVER_CONTADOR,
   });
 };

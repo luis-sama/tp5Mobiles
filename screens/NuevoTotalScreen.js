@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { View, ScrollView, Text, StyleSheet, Button } from 'react-native';
 import Controles from '../components/Controles';
 import ContadorContainer from '../components/ContadorContainer';
+import Total from '../components/ContadorContainer';
 import store from '../state/store';
 
 class NuevoTotalScreen extends React.Component {
@@ -13,6 +14,7 @@ class NuevoTotalScreen extends React.Component {
 					<Text style={ styles.title }>Nuevo total</Text>
 
           <Controles />
+
           <ScrollView style={styles.scrollViewContainer}>
             <ContadorContainer />
           </ScrollView>
